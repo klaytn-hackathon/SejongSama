@@ -1,0 +1,17 @@
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\obj\Debug\netcoreapp2.2\BeggarBetting.API.csprojAssemblyReference.cache
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\obj\Debug\netcoreapp2.2\BeggarBetting.API.csproj.CoreCompileInputs.cache
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\obj\Debug\netcoreapp2.2\BeggarBetting.API.RazorAssemblyInfo.cache
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\obj\Debug\netcoreapp2.2\BeggarBetting.API.RazorAssemblyInfo.cs
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\obj\Debug\netcoreapp2.2\BeggarBetting.API.AssemblyInfoInputs.cache
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\obj\Debug\netcoreapp2.2\BeggarBetting.API.AssemblyInfo.cs
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\bin\Debug\netcoreapp2.2\BeggarBetting.API.deps.json
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\bin\Debug\netcoreapp2.2\BeggarBetting.API.runtimeconfig.json
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\bin\Debug\netcoreapp2.2\BeggarBetting.API.runtimeconfig.dev.json
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\bin\Debug\netcoreapp2.2\BeggarBetting.API.dll
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\bin\Debug\netcoreapp2.2\BeggarBetting.API.pdb
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\bin\Debug\netcoreapp2.2\BeggarBetting.Model.dll
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\bin\Debug\netcoreapp2.2\BeggarBetting.Model.pdb
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\obj\Debug\netcoreapp2.2\BeggarBetting.API.RazorTargetAssemblyInfo.cache
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\obj\Debug\netcoreapp2.2\BeggarBetting.API.csproj.CopyComplete
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\obj\Debug\netcoreapp2.2\BeggarBetting.API.dll
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.API\obj\Debug\netcoreapp2.2\BeggarBetting.API.pdb

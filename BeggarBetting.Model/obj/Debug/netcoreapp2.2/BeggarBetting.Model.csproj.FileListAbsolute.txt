@@ -1,0 +1,11 @@
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.Model\bin\Debug\netcoreapp2.2\BeggarBetting.Model.deps.json
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.Model\bin\Debug\netcoreapp2.2\BeggarBetting.Model.runtimeconfig.json
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.Model\bin\Debug\netcoreapp2.2\BeggarBetting.Model.runtimeconfig.dev.json
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.Model\bin\Debug\netcoreapp2.2\BeggarBetting.Model.dll
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.Model\obj\Debug\netcoreapp2.2\BeggarBetting.Model.csproj.CoreCompileInputs.cache
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.Model\obj\Debug\netcoreapp2.2\BeggarBetting.Model.AssemblyInfoInputs.cache
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.Model\obj\Debug\netcoreapp2.2\BeggarBetting.Model.AssemblyInfo.cs
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.Model\obj\Debug\netcoreapp2.2\BeggarBetting.Model.csprojAssemblyReference.cache
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.Model\bin\Debug\netcoreapp2.2\BeggarBetting.Model.pdb
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.Model\obj\Debug\netcoreapp2.2\BeggarBetting.Model.dll
+C:\Users\she jong shon\Desktop\etc\projects\lessons\Klaytn\hackathon\BeggarBetting\BeggarBetting.Model\obj\Debug\netcoreapp2.2\BeggarBetting.Model.pdb
