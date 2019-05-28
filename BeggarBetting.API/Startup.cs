@@ -42,7 +42,8 @@ namespace BeggarBetting.API
 
             app.UseCors(builder =>
             {
-                builder.WithOrigins("http://localhost:4200"); // Development           
+                builder.WithOrigins("http://localhost:4200"); // Development  
+                //builder.WithOrigins("https://beggarbetting-2d587.firebaseapp.com"); // Production      
                 builder.AllowAnyHeader();
                 builder.AllowAnyMethod();
             });

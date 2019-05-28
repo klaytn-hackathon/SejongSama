@@ -1,0 +1,147 @@
+<ng4-loading-spinner> </ng4-loading-spinner>
+<div @easeInOut>
+  <section id="wrapper">
+    <div class="main-header">
+      <div class="header wrapper clearfix">
+
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="header-wrap">
+        <div class="header">
+          <p class="bottom">The Moment of Truth</p>
+        </div>
+        <div class="text-center">
+          <p *ngIf="hasLoggedIn"><strong>My Address:</strong> <span
+              style="color: red;"><strong>{{account}}</strong></span></p>
+          <p *ngIf="hasLoggedIn"><strong>My Balance:</strong> <span style="color: red;"><strong>{{balance}}
+                KLAY</strong></span></p>             
+        </div>
+      </div>
+      <div class="main wrapper clearfix">
+        <div class="content">
+          <form #addressForm="ngForm" class="form-horizontal" novalidate>
+            <h2>Find your records</h2>
+            <p>Hope the beggar won the bet!</p>
+            <p *ngIf="!hasLoggedIn" style="color: red;">Please Login.</p>
+            <div class="form-group">
+              <div class="row" *ngIf="hasLoggedIn">
+                <div class="col-md-5 col-xs-12">
+                  <input type="text" class="form-control" id="address"
+                    placeholder="Enter your klaytn account address 0x..." required [(ngModel)]="betterAddress"
+                    name="address" minlength="42" maxlength="42" pattern="0x.+" #address="ngModel">
+                </div>
+                <div class="col-md-1 col-sm-1 col-xs-4">
+                  <button type="submit" class="btn btn-default" [disabled]="!addressForm.form.valid"
+                    [disabled]="isSubmitted" (click)="loadBetterBettingInfo(addressForm)">Submit
+                  </button>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4-push-5">
+                  <button (click)="refresh()" class="btn btn-default" title="refresh">
+                    <span class='glyphicon glyphicon-refresh'></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="main wrapper clearfix">
+        <div class="content">
+          <div @easeInOut *ngIf="hasRecords" class="table-responsive">
+            <div style="overflow-x:auto;">
+              <div class="form-group" style="float:right">
+                <div class="col-md-12">
+                  <label class="control-label">Search </label>
+                  <input class="form-control" type="text" name="search" [(ngModel)]="filter">
+                </div>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th (click)="sort('date')">Date
+                      <span class="glyphicon sort-icon" *ngIf="key =='date'"
+                        [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th (click)="sort('homeTeam')">Home
+                      <span class="glyphicon sort-icon" *ngIf="key =='homeTeam'"
+                        [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th (click)="sort('awayTeam')">Away
+                      <span class="glyphicon sort-icon" *ngIf="key =='awayTeam'"
+                        [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th (click)="sort('homeTeamScore')">Home Score
+                      <span class="glyphicon sort-icon" *ngIf="key =='homeTeamScore'"
+                        [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th (click)="sort('awayTeamScore')">Away Score
+                      <span class="glyphicon sort-icon" *ngIf="key =='awayTeamScore'"
+                        [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th (click)="sort('bettingPrice')">Bet
+                      <span class="glyphicon sort-icon" *ngIf="key =='bettingPrice'"
+                        [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th (click)="sort('status')">Status
+                      <span class="glyphicon sort-icon" *ngIf="key =='status'"
+                        [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let info of betterBettingInfo | 
+                                        orderBy: key : !reverse | 
+                                        filter: filter | 
+                                        paginate: { itemsPerPage: 10, currentPage: p };"
+                    [style.backgroundColor]="getRowColor(info)">
+                    <td>{{info.dateEvent}}</td>
+                    <td><strong>{{info.homeTeam}}</strong></td>
+                    <td><strong>{{info.awayTeam}}</strong></td>
+                    <td>{{info.homeTeamScore}}</td>
+                    <td>{{info.awayTeamScore}}</td>
+                    <td>{{info.bettingPrice}} KLAY</td>
+                    <td>
+                      <button *ngIf="info.isWinner&&info.hasReceivedPrize==false" type="submit" class="btn btn-default"
+                        (click)="callClaimPrizes(info)">Claim Prize
+                      </button>
+                      <button *ngIf="info.isWinner&&info.hasReceivedPrize" type="submit" class="btn btn-info"
+                        (click)="infoModal.openModal()">Summary
+                      </button>
+                      <p *ngIf="info.isWinner==false&&info.isGameInProgress==false">Lost the bet
+                        <a
+                          pTooltip="{{info.homeTeam}} {{info.homeFinalScore}} : {{info.awayFinalScore}} {{info.awayTeam}}">
+                          <span class="glyphicon glyphicon-info-sign"></span>
+                        </a>
+                      </p>
+                      <p *ngIf="info.isGameInProgress">In progress</p>
+                    </td>
+                    <info-modal [info]="info" #infoModal></info-modal>
+                  </tr>
+                </tbody>
+                <br />
+              </table>
+              <pagination-controls (pageChange)="p=$event"></pagination-controls>
+            </div>
+          </div>
+
+          <div *ngIf="transactionScope">
+            <p style="text-align: center;">
+              <a href='https://baobab.klaytnscope.com/tx/{{transactionScope}}' style="color: red;" target='_blank'>Check
+                your transaction record!</a>
+            </p>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="copyright">
+        <p>Copyright &copy; 2019 Beggar Betting</p>
+        <p>Contract Address: 0xa1de22879044790dbe48028db33d7320be2d7e06</p>
+      </div>
+    </div>
+  </section>
+</div>

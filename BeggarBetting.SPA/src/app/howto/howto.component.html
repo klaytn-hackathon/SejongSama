@@ -1,0 +1,130 @@
+<div @easeInOut style="overflow-x:auto;">
+    <section id="wrapper">
+        <div class="main-header">
+            <div class="header wrapper clearfix">
+         
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="header-wrap">
+                <div class="header">                    
+                    <p class="top">How to use this site?</p>
+                </div>
+            </div>
+            <div class="main wrapper clearfix">
+                <div class="content">      
+                    <br />
+                    <h4>Welcome beggars!</h4>
+                    <br />                   
+                    <p>Beggar Betting is a blockchain-based sports betting website for those people who want <strong><i>fun, simple, low cost, and reliable</i></strong> cryptocurrency betting platform. Depending on your privilege, you can place a bet from the lowest 0.2 KLAY to the highest 1 KLAY and this is very affordable for most of us! 
+                       Our platform runs on the Klaytn network, utilizing smart contract to ensure a fair and transparent process. Good thing that we store your betting data on the blockchain. <i class='fa fa-smile-o' aria-hidden="true"></i> 
+                       Everyday on UTC time, new sports matches are loaded for you. Currently our sports leagues include <strong>EPL, Bundesliga, Laliga, SerieA, and MLS</strong>.</p>                                       
+                    <p>Before you start betting, you need to create an account from <a href="https://baobab.klaytnwallet.com/" target="_blank" style="text-decoration: none"><strong>Klaytn Wallet</strong></a>.                                         
+                    <br />
+                    <h4 id="warning">You must be over 18 years of age and of legal capacity to place a bet.</h4>
+                    <br />
+                    <h3>Privilege System</h3>                    
+                    <p>As you win more bets, your next privilege is unlocked. That means, we approve an increase in betting limits (yeah). You are the one who can make your beggar gradually become rich!</p>
+                    <p><strong>Remember, you must claim winning and receive prize in order to advance to the next privilege.</strong></p>
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Privilege</th>
+                                <th>When</th>
+                                <th>Betting Price</th>  
+                                <th></th>          
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>          
+                                <td><img src="/assets/img/bum.png" alt="bum" pTooltip="bum"> bum</td>    
+                                <td>0 ~ 2 winnings bet(s)</td>
+                                <td>0.2 KLAY</td>         
+                            </tr>
+                            <tr>          
+                                <td><img src="/assets/img/panhandler.png" alt="panhandler" pTooltip="panhandler"> panhandler</td>                                  
+                                <td>3 ~ 7 winning bets</td>
+                                <td>0.4 KLAY</td>                                              
+                            </tr>
+                            <tr>          
+                                <td><img src="/assets/img/vagabond.png" alt="vagabond" pTooltip="vagabond"> vagabond</td>
+                                <td>8 ~ 14 winning bets</td>
+                                <td>0.6 KLAY</td>                                                                         
+                            </tr>
+                            <tr>          
+                                <td><img src="/assets/img/tramp.png" alt="tramp" pTooltip="tramp"> tramp</td>
+                                <td>15 ~ 20 winning bets</td>
+                                <td>0.8 KLAY</td>                                  
+                            </tr>                            
+                            <tr>          
+                                <td><img src="/assets/img/middleclass.png" alt="middleclass" pTooltip="middle class"> middle class</td>
+                                <td>21 winnings bets</td>
+                                <td>1 KLAY</td>                     
+                            </tr>
+                           
+                        </tbody>
+                    </table>                 
+              
+                    <br />
+
+                    <h3>How to bet</h3>                    
+                    <p>You can place a bet by clicking on a Bet button from <a href="/home" target="_blank" style="text-decoration: none">Daily Schedule</a> page. Remember, you can only place a bet before the game starts.
+                       Depending on the amount of traffic that our API provider gets, there could be some time delay before it loads schedule into the table.</p>                                                            
+                    <br />
+
+                    <h3>My History</h3>
+                    <p>Once you made bets, your records can be seen from <a href="/myhistory" target="_blank" style="text-decoration: none">My History</a> page.</p>
+                    <table class="table table-responsive" style="width: auto !important">
+                        <thead>
+                            <tr>
+                                <th>Status</th>
+                                <th>Row Color</th>                                           
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Won the bet</td>
+                                <td>Green</td>
+                            </tr>
+                            <tr>
+                                <td>Lost the bet</td>
+                                <td>Red</td>
+                            </tr>
+                            <tr>
+                                <td>Final scores not updated yet</td>
+                                <td>Yellow</td>
+                            </tr>
+                        </tbody>
+                    </table>                                                         
+                    <div class="hidden-sm hidden-xs">
+                        <img src="/assets/img/records.png" alt="records">
+                    </div>
+                    <p>We are using a third-party resource to get data for sports events. Final scores are received after 24 hours, so remember you won't be able to claim winnings right after the game is finished. A bit of patience is required. <i class='fa fa-smile-o' aria-hidden="true"></i></p>
+                    
+                    <br />
+
+                    <h3>Winning Prize</h3>
+                    <p>When you guessed the scores right, you can claim your winning prize by clicking Claim Prize button from <a href="/myhistory" target="_blank" style="text-decoration: none">My History</a> page. We will then send you the prize directly from the contract.</p>
+                    <p>Here is the formula how your prize will be calculated from the smart contract. There is no trick, it is very simple.</p>
+                    <pre>((Betting Price * Number of Participants) / Number of Winners) - Commission (3%)</pre>                    
+                    <h4>Use Case</h4>
+                    <p>If you bet on a 0.4 KLAY match and there were in total 13 participants. Let's say you guessed the scores right and there was one more person who also won the bet, then it will be: 
+                      <br />  <br /> 
+                      <strong>Your prize: </strong><span><i>(0.4 * 13) / 2 = 2.6 KLAY</i></span> 
+                      <br /> 
+                      <strong>Commission: </strong><span>3% commission from your prize, <i>2.6 * 0.03 = 0.078 KLAY</i></span>
+                    </p> 
+                    <p>So as a final winning prize, you will be getting <span><i>2.6 - 0.078 =</i><strong><i> 2.522 KLAY</i></strong></span></p>                    
+                </div>
+            </div>            
+        </div> 
+        <div id="footer">
+            <div class="copyright">
+                <p>Copyright &copy; 2019 Beggar Betting</p>
+                <p>Contract Address: 0xa1de22879044790dbe48028db33d7320be2d7e06</p>
+            </div>
+        </div>    
+        <br />
+        <br />          
+    </section>
+</div>

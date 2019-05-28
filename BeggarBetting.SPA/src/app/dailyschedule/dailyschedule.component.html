@@ -1,0 +1,60 @@
+<ng4-loading-spinner> </ng4-loading-spinner>
+<div @easeInOut *ngIf="hasNoEvents==false; else no_events" style="overflow-x:auto;">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>League</th>
+        <th>Date</th>
+        <th>Home</th>
+        <th>Away</th>
+        <th>Bet</th>
+        <th></th>
+        <th>Starts in</th>
+        <th><span class="glyphicon glyphicon-info-sign" pTooltip="Number of Participant(s)"></span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let schedule of schedules">
+        <td>{{schedule.league}}</td>
+        <td>{{schedule.date}}</td>
+        <td><strong>{{schedule.homeTeam}}</strong></td>
+        <td><strong>{{schedule.awayTeam}}</strong></td>
+        <td>{{bet}} KLAY</td>
+        <td>
+          <button class="btn btn-info" [disabled]=!hasLoggedIn (click)="confirmBetModal.openModal()"> Bet</button>
+        </td>
+        <td>
+          <countdown [seconds]="schedule.gameStartsIn" (checkTime)="checkTimeExpired($event);"></countdown>
+        </td>
+        <td>
+          {{schedule.numOfBetters}}
+        </td>
+        <confirm-bet-modal [schedule]="schedule" (request)="successFromConfirmModal($event);"
+          (scope)="getScope($event);" #confirmBetModal>
+        </confirm-bet-modal>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="transactionScope">
+    <p style="text-align: center;">
+      <a href='https://baobab.klaytnscope.com/tx/{{transactionScope}}' style="color: red;" target='_blank'>Check your
+        transaction record!</a>
+    </p>
+    <br />
+  </div>
+
+  <div style="float: left;">
+    <button class="btn btn-warning" (click)="infopanel.showDialog()">Privilege Status</button>
+    <info-panel #infopanel></info-panel>
+  </div>
+  <div style="float: right;">
+    <h5 style="color: red;">WARNING <span class="glyphicon glyphicon-exclamation-sign"
+        pTooltip="Please check the schedule before you decide to bet as we are NOT responsible for any cancelled, delayed/postponed event(s)"></span>
+    </h5>
+  </div>
+</div>
+
+<ng-template #no_events>
+  <h2>There are no events today: {{ date }}</h2>
+</ng-template>

@@ -1,0 +1,44 @@
+<ng4-loading-spinner> </ng4-loading-spinner>
+<div *ngIf="!acctService.isAuthenticated()" @easeInOut>
+  <section id="wrapper" style="max-width: 450px;">
+    <div class="main-header">
+      <div class="header wrapper clearfix">
+
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="header-wrap">
+        <div class="header">
+          <p class="top">Login</p>
+        </div>
+      </div>
+      <div class="main wrapper clearfix">
+        <div class="content">
+          <div class="row">
+            <div class="col-md-12">
+              <br />
+              <div class="form-group">
+                <label for="keystore">Keystore</label>
+                <input type="file" (change)="handleImport($event)" placeholder="Upload file..." />
+              </div>
+              <div class="form-group">
+                <label for="input-password">Password</label>
+                <input type="password" class="form-control" id="password" [(ngModel)]="password">
+                <p class="help-block">{{message}}</p>
+              </div>
+              <div class="pull-right">
+                <button type="submit" class="btn btn-default" (click)="handleLogin()">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div *ngIf="acctService.isAuthenticated()" style="text-align: center;">
+  <br /><br /><br /><br />
+  <h1 class="text-success">You have been successfully logged in!</h1>
+  <br />
+</div>

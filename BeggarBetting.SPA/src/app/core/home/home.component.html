@@ -1,0 +1,56 @@
+<div @easeInOut style="overflow-x:auto;">
+    <section id="wrapper">
+        <div class="main-header">
+            <div class="header wrapper clearfix"></div>
+        </div>
+        <div class="main-container">
+            <div class="header-wrap">
+                <div class="header">
+                    <p class="bottom">High chance of winning!</p>
+                </div>
+                <div class="text-center">
+                    <p *ngIf="hasLoggedIn"><strong>My Address:</strong> <span
+                            style="color: red;"><strong>{{account}}</strong></span></p>
+                    <p *ngIf="hasLoggedIn"><strong>My Balance:</strong> <span style="color: red;"><strong>{{balance}}
+                                KLAY</strong></span></p>
+                </div>
+            </div>
+            <div class="main wrapper clearfix">
+                <div class="content table-responsive">
+                    <br />
+                    <p-tabView>
+                        <p-tabPanel header="bum" leftIcon="fa bum">
+                            <daily-schedule [hasLoggedIn]=hasLoggedIn [bettingPrice]=0.2></daily-schedule>
+                        </p-tabPanel>
+                        <p-tabPanel header="panhandler" leftIcon="fa panhandler" [disabled]="!panhandler">
+                            <ng-template pTemplate="content">
+                                <daily-schedule [hasLoggedIn]=hasLoggedIn [bettingPrice]=0.4></daily-schedule>
+                            </ng-template>
+                        </p-tabPanel>
+                        <p-tabPanel header="vagabond" leftIcon="fa vagabond" [disabled]="!vagabond">
+                            <ng-template pTemplate="content">
+                                <daily-schedule [hasLoggedIn]=hasLoggedIn [bettingPrice]=0.6></daily-schedule>
+                            </ng-template>
+                        </p-tabPanel>
+                        <p-tabPanel header="tramp" leftIcon="fa tramp" [disabled]="!tramp">
+                            <ng-template pTemplate="content">
+                                <daily-schedule [hasLoggedIn]=hasLoggedIn [bettingPrice]=0.8></daily-schedule>
+                            </ng-template>
+                        </p-tabPanel>
+                        <p-tabPanel header="middle class" leftIcon="fa middleclass" [disabled]="!middleclass">
+                            <ng-template pTemplate="content">
+                                <daily-schedule [hasLoggedIn]=hasLoggedIn [bettingPrice]=1></daily-schedule>
+                            </ng-template>
+                        </p-tabPanel>
+                    </p-tabView>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="copyright">
+                <p>Copyright &copy; 2019 Beggar Betting</p>
+                <p>Contract Address: 0xa1de22879044790dbe48028db33d7320be2d7e06</p>
+            </div>
+        </div>
+    </section>
+</div>

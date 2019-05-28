@@ -1,0 +1,50 @@
+<div bsModal #confirmBetModal="bs-modal" class="modal fade" tabindex="-1" role="dialog"
+  aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3>Guess the Score!</h3>
+        <h5>Result comes out within 24 hours</h5>
+      </div>
+      <div class="modal-body">
+        <form #bettingScoreForm="ngForm" novalidate>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-6 col-xs-6">
+                <p style="text-align:center;">
+                  {{schedule.homeTeam}}
+                </p>
+              </div>
+              <div class="col-md-6 col-xs-6">
+                <p style="text-align:center;">
+                  {{schedule.awayTeam}}
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5 col-md-push-1 col-xs-4">
+                <input type="text" pInputText id="htScore" required [(ngModel)]="schedule.homeTeamScore" name="htScore"
+                  pattern="[0-9]+" placeholder="Home Team Score" #htScore="ngModel">
+              </div>
+              <div class="col-md-2 col-xs-4">
+                <p style="text-align:center;">vs</p>
+              </div>
+              <div class="col-md-5 col-xs-4">
+                <input type="text" pInputText id="atScore" required [(ngModel)]="schedule.awayTeamScore" name="atScore"
+                  pattern="[0-9]+" placeholder="Away Team Score" #atScore="ngModel">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <button type="submit" class="btn btn-default" [disabled]="!bettingScoreForm.form.valid"
+        (click)="submitBettingScore(bettingScoreForm)"
+        style="display: block; margin: 0 auto; position: relative; bottom: 15px;">Let's Bet!
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,246 @@
+thead>tr>th {
+  cursor: pointer;
+}
+#termsOfService {
+  text-align: center;
+}
+#termsOfService > a {
+  text-decoration: none;
+}
+pre {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 3px solid #f36d33;
+  color: #666;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
+}
+#warning {
+  color: #D8000C;
+  background-color: #FFD2D2;
+}
+.bum {
+  content: url("../src/assets/img/bum.png");  
+}
+.vagabond {
+  content: url("../src/assets/img/vagabond.png");  
+}
+.tramp {
+  content: url("../src/assets/img/tramp.png");  
+}
+.panhandler {
+  content: url("../src/assets/img/panhandler.png");  
+}
+.middleclass {
+  content: url("../src/assets/img/middleclass.png");  
+}
+.number {
+  float: right;
+}
+/* ===== Initializr Styles ==================================================
+  Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+  ========================================================================== */
+
+body {
+    font: 15px/26px 'Segoe UI';
+    background: url('../src/assets/img/background.jpg');  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+.gradient {
+  filter: none;
+}
+
+/* ==========================================================================
+  Author's custom styles
+  ========================================================================== */
+.header p a {color:#fefefe;}
+section#wrapper{
+  width: 1100px; 
+  margin: 50px auto;
+}    
+.main-container{
+  border: 1px solid #e1e1e1;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  padding-bottom: 20px;
+  -webkit-box-shadow: 0px 0px 5px 0px #dcdcdc;
+        
+        box-shadow: 0px 0px 5px 0px #dcdcdc;
+}
+.main-container .header-wrap{
+  margin: 0;
+  padding:0;
+  background-color: #ecd200;
+  -webkit-box-shadow: inset 0px 0px 5px 0px #727272;
+        
+        box-shadow: inset 0px 0px 5px 0px #727272;
+}
+.main-container .header-wrap .header{
+  width: 100%;
+  margin: 0px auto;
+  padding: 20px 0;
+}
+.main-container .header-wrap .header p{
+  margin: 0;
+  color: #fffffe;
+  text-shadow: 1px 1px 1px #595959;
+        filter: dropshadow(color=#595959, offx=1, offy=1);
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  text-align: center;
+}
+.main-container .header-wrap .header p.top{
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: -1px;
+}
+.main-container .header-wrap .header p.bottom{
+  font-size: 72px;
+  line-height: 74px;
+  letter-spacing: -4px;
+}
+.main-container .main{
+  width: 80%;
+}
+.main-container .main p{
+  color: #555555;
+  font-size: 18px;
+  font-weight: 400;
+}
+#footer{
+	position: relative;
+	width: 100%;
+	margin: 0px auto;
+	font-size: 14px;
+	z-index: 20;
+	text-align: center;
+}
+#footer .copyright {margin-top:20px;}
+#footer .copyright p{ 
+	position: relative;
+	text-align: center;
+	margin-top: 5px;
+	z-index: 20;
+	color: #555552;
+}
+/* ==========================================================================
+  Media Queries
+  ========================================================================== */
+
+@media only screen and (max-width: 650px) {
+  section#wrapper{width: 92%;}
+  
+}
+@media only screen and (max-width: 500px) {
+  .main-container .header-wrap .header p.bottom{
+  font-size: 46px;
+  line-height: 45px;
+  letter-spacing: -4px;
+}
+  ul#countdown li {
+    margin-right: 2px;
+}
+}
+@media only screen and (max-width: 429px) {
+  #timer {width: 70%;}
+  ul#countdown li {
+    margin-right: 0px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #timer {width: 95%;}
+  ul#countdown li {
+    margin-right: 0px;
+  }
+}
+
+/* ==========================================================================
+  Navbar
+  ========================================================================== */
+
+.navbar-default {
+  background-color: #fff8ba;
+  border-color: #e1f7f5;
+}
+.navbar-default .navbar-brand {
+  color: #fd8585;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #fd8585;
+}
+.navbar-default .navbar-text {
+  color: #fd8585;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fd8585;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fd8585;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #fd8585;
+  background-color: #e1f7f5;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #fd8585;
+  background-color: #e1f7f5;
+}
+.navbar-default .navbar-toggle {
+  border-color: #d1e0fd;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #e1f7f5;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fd8585;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #fd8585;
+}
+.navbar-default .navbar-link {
+  color: #fd8585;
+}
+.navbar-default .navbar-link:hover {
+  color: #fd8585;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fd8585;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fd8585;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fd8585;
+    background-color: #e1f7f5;
+  }
+}

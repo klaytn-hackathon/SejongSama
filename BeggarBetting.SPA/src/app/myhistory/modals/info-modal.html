@@ -1,0 +1,30 @@
+<div bsModal #infoModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Congratulations!</h2>         
+            <h4>You've won the bet!</h4>
+        </div>            
+        <div class="modal-body">           
+            <div class="form-group">              
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-xs-12">
+                        <div class="col-md-12 col-xs-12">                         
+                            <p>Betting price was <strong>{{info.bettingPrice}} KLAY</strong></p>    
+                            <p>In total <strong>{{info.numOfBetters}}</strong> person(s) participated</p>    
+                            <p>In total <strong>{{info.numOfWinners}}</strong> person(s) won the bet</p>                           
+                            <p>Prize you received: 
+                                <strong>{{info.winningPrize}} KLAY</strong> 
+                            </p>   
+                            <p>3% commission: <strong>{{commission}} KLAY</strong></p> 
+                        </div>   
+                    </div>
+                </div>  
+            </div>
+        </div>  
+    </div>
+  </div>
+</div>

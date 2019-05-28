@@ -1,0 +1,16 @@
+<p-dialog [showHeader]="false" [(visible)]="display" modal="modal" [dismissableMask]="true" [responsive]="true">   
+    <div>
+        <img src="Card" src="assets/img/privilege.jpg" style="width:185px; height:120px;">    
+        <h3>Accomplishment</h3>
+        <div>
+            <p>Middle Class: <span class="number">{{numOfMiddleClass}}</span></p>
+            <p>Tramp: <span class="number">{{numOfTramp}}</span></p>
+            <p>Vagabond: <span class="number">{{numOfVagabond}}</span></p>
+            <p>Panhandler: <span class="number">{{numOfPanhandler}}</span></p>
+        </div>  
+        <hr>
+        <h6 style="float: right;">Info: 
+            <span class="glyphicon glyphicon-info-sign" pTooltip="Numbers show how many people in the network have reached each privilege until now"></span>
+        </h6>
+    </div>  
+</p-dialog>
