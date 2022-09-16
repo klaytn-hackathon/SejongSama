@@ -23,7 +23,7 @@
     "@angular/router": "^5.0.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0",
     "alertify-js": "^0.3.11",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "caver-js": "^0.0.2-r",
     "connect-privkey-to-provider": "^0.0.3",
     "core-js": "^2.4.1",
